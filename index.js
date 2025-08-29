@@ -6,6 +6,7 @@ app.use(express.json())
 const cors = require("cors")
 app.use(cors())
 
+
 intialiseDatabase()
 
 const corsOptions = {
@@ -225,7 +226,7 @@ app.delete("/books/:bookId",async (req,res) => {
     }
 })
 
-PORT =3000
+PORT =process.env.PORT
 
 app.listen(PORT,()=>{
     console.log("Connected to PORT",PORT)
